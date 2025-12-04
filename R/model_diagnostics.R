@@ -66,20 +66,44 @@ plot_residuals_vs_fitted <- function(fitted_values, residuals, plot_name = NULL,
   }
   
   if (save) {
-    filename <- if (!is.null(plot_name)) {
-      file.path(DIAGNOSTICS_DIR, paste0("residuals_vs_fitted_", plot_name, ".png"))
+    if (!is.null(plot_name)) {
+      # Handle vector plot_name: create separate files for each unique plot
+      if (length(plot_name) > 1) {
+        unique_plots <- unique(plot_name)
+        for (plot_val in unique_plots) {
+          filename <- file.path(DIAGNOSTICS_DIR, paste0("residuals_vs_fitted_", plot_val, ".png"))
+          ggsave(
+            filename = filename,
+            plot = p,
+            width = 10,
+            height = 6,
+            dpi = 300
+          )
+          message("Saved: ", filename)
+        }
+      } else {
+        # Single plot_name value
+        filename <- file.path(DIAGNOSTICS_DIR, paste0("residuals_vs_fitted_", plot_name, ".png"))
+        ggsave(
+          filename = filename,
+          plot = p,
+          width = 10,
+          height = 6,
+          dpi = 300
+        )
+        message("Saved: ", filename)
+      }
     } else {
-      file.path(DIAGNOSTICS_DIR, "residuals_vs_fitted.png")
+      filename <- file.path(DIAGNOSTICS_DIR, "residuals_vs_fitted.png")
+      ggsave(
+        filename = filename,
+        plot = p,
+        width = 10,
+        height = 6,
+        dpi = 300
+      )
+      message("Saved: ", filename)
     }
-    
-    ggsave(
-      filename = filename,
-      plot = p,
-      width = 10,
-      height = 6,
-      dpi = 300
-    )
-    message("Saved: ", filename)
   }
   
   return(p)
@@ -113,20 +137,44 @@ plot_residual_histogram <- function(residuals, plot_name = NULL, save = TRUE) {
   }
   
   if (save) {
-    filename <- if (!is.null(plot_name)) {
-      file.path(DIAGNOSTICS_DIR, paste0("residuals_histogram_", plot_name, ".png"))
+    if (!is.null(plot_name)) {
+      # Handle vector plot_name: create separate files for each unique plot
+      if (length(plot_name) > 1) {
+        unique_plots <- unique(plot_name)
+        for (plot_val in unique_plots) {
+          filename <- file.path(DIAGNOSTICS_DIR, paste0("residuals_histogram_", plot_val, ".png"))
+          ggsave(
+            filename = filename,
+            plot = p,
+            width = 10,
+            height = 6,
+            dpi = 300
+          )
+          message("Saved: ", filename)
+        }
+      } else {
+        # Single plot_name value
+        filename <- file.path(DIAGNOSTICS_DIR, paste0("residuals_histogram_", plot_name, ".png"))
+        ggsave(
+          filename = filename,
+          plot = p,
+          width = 10,
+          height = 6,
+          dpi = 300
+        )
+        message("Saved: ", filename)
+      }
     } else {
-      file.path(DIAGNOSTICS_DIR, "residuals_histogram.png")
+      filename <- file.path(DIAGNOSTICS_DIR, "residuals_histogram.png")
+      ggsave(
+        filename = filename,
+        plot = p,
+        width = 10,
+        height = 6,
+        dpi = 300
+      )
+      message("Saved: ", filename)
     }
-    
-    ggsave(
-      filename = filename,
-      plot = p,
-      width = 10,
-      height = 6,
-      dpi = 300
-    )
-    message("Saved: ", filename)
   }
   
   return(p)
@@ -160,20 +208,44 @@ plot_residual_qq <- function(residuals, plot_name = NULL, save = TRUE) {
   }
   
   if (save) {
-    filename <- if (!is.null(plot_name)) {
-      file.path(DIAGNOSTICS_DIR, paste0("residuals_qq_", plot_name, ".png"))
+    if (!is.null(plot_name)) {
+      # Handle vector plot_name: create separate files for each unique plot
+      if (length(plot_name) > 1) {
+        unique_plots <- unique(plot_name)
+        for (plot_val in unique_plots) {
+          filename <- file.path(DIAGNOSTICS_DIR, paste0("residuals_qq_", plot_val, ".png"))
+          ggsave(
+            filename = filename,
+            plot = p,
+            width = 10,
+            height = 6,
+            dpi = 300
+          )
+          message("Saved: ", filename)
+        }
+      } else {
+        # Single plot_name value
+        filename <- file.path(DIAGNOSTICS_DIR, paste0("residuals_qq_", plot_name, ".png"))
+        ggsave(
+          filename = filename,
+          plot = p,
+          width = 10,
+          height = 6,
+          dpi = 300
+        )
+        message("Saved: ", filename)
+      }
     } else {
-      file.path(DIAGNOSTICS_DIR, "residuals_qq.png")
+      filename <- file.path(DIAGNOSTICS_DIR, "residuals_qq.png")
+      ggsave(
+        filename = filename,
+        plot = p,
+        width = 10,
+        height = 6,
+        dpi = 300
+      )
+      message("Saved: ", filename)
     }
-    
-    ggsave(
-      filename = filename,
-      plot = p,
-      width = 10,
-      height = 6,
-      dpi = 300
-    )
-    message("Saved: ", filename)
   }
   
   return(p)

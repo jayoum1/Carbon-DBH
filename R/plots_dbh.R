@@ -53,6 +53,13 @@ if (!"growthrate" %in% colnames(df)) {
   }
 }
 
+# Validate required columns exist
+required_cols <- c("plot", "year")
+missing_cols <- required_cols[!required_cols %in% colnames(df)]
+if (length(missing_cols) > 0) {
+  stop("Error: Missing required columns: ", paste(missing_cols, collapse = ", "))
+}
+
 message("Data loaded: ", nrow(df), " rows × ", ncol(df), " columns")
 message("Plots: ", paste(unique(df$plot), collapse = ", "))
 message("Years: ", min(df$year, na.rm = TRUE), " - ", max(df$year, na.rm = TRUE))
