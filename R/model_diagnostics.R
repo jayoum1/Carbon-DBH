@@ -59,7 +59,11 @@ plot_residuals_vs_fitted <- function(fitted_values, residuals, plot_name = NULL,
       x = "Fitted Values",
       y = "Residuals"
     ) +
-    theme_minimal()
+    theme_minimal() +
+    theme(
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
+    )
   
   if (!is.null(plot_name)) {
     p <- p + facet_wrap(~ plot)
@@ -77,7 +81,8 @@ plot_residuals_vs_fitted <- function(fitted_values, residuals, plot_name = NULL,
             plot = p,
             width = 10,
             height = 6,
-            dpi = 300
+            dpi = 300,
+            bg = "white"
           )
           message("Saved: ", filename)
         }
@@ -89,7 +94,8 @@ plot_residuals_vs_fitted <- function(fitted_values, residuals, plot_name = NULL,
           plot = p,
           width = 10,
           height = 6,
-          dpi = 300
+          dpi = 300,
+          bg = "white"
         )
         message("Saved: ", filename)
       }
@@ -100,7 +106,8 @@ plot_residuals_vs_fitted <- function(fitted_values, residuals, plot_name = NULL,
         plot = p,
         width = 10,
         height = 6,
-        dpi = 300
+        dpi = 300,
+        bg = "white"
       )
       message("Saved: ", filename)
     }
@@ -130,7 +137,11 @@ plot_residual_histogram <- function(residuals, plot_name = NULL, save = TRUE) {
       x = "Residuals",
       y = "Frequency"
     ) +
-    theme_minimal()
+    theme_minimal() +
+    theme(
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
+    )
   
   if (!is.null(plot_name)) {
     p <- p + facet_wrap(~ plot, scales = "free")
@@ -148,7 +159,8 @@ plot_residual_histogram <- function(residuals, plot_name = NULL, save = TRUE) {
             plot = p,
             width = 10,
             height = 6,
-            dpi = 300
+            dpi = 300,
+            bg = "white"
           )
           message("Saved: ", filename)
         }
@@ -160,7 +172,8 @@ plot_residual_histogram <- function(residuals, plot_name = NULL, save = TRUE) {
           plot = p,
           width = 10,
           height = 6,
-          dpi = 300
+          dpi = 300,
+          bg = "white"
         )
         message("Saved: ", filename)
       }
@@ -171,7 +184,8 @@ plot_residual_histogram <- function(residuals, plot_name = NULL, save = TRUE) {
         plot = p,
         width = 10,
         height = 6,
-        dpi = 300
+        dpi = 300,
+        bg = "white"
       )
       message("Saved: ", filename)
     }
@@ -201,7 +215,11 @@ plot_residual_qq <- function(residuals, plot_name = NULL, save = TRUE) {
       x = "Theoretical Quantiles",
       y = "Sample Quantiles"
     ) +
-    theme_minimal()
+    theme_minimal() +
+    theme(
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
+    )
   
   if (!is.null(plot_name)) {
     p <- p + facet_wrap(~ plot)
@@ -219,7 +237,8 @@ plot_residual_qq <- function(residuals, plot_name = NULL, save = TRUE) {
             plot = p,
             width = 10,
             height = 6,
-            dpi = 300
+            dpi = 300,
+            bg = "white"
           )
           message("Saved: ", filename)
         }
@@ -231,7 +250,8 @@ plot_residual_qq <- function(residuals, plot_name = NULL, save = TRUE) {
           plot = p,
           width = 10,
           height = 6,
-          dpi = 300
+          dpi = 300,
+          bg = "white"
         )
         message("Saved: ", filename)
       }
@@ -242,7 +262,8 @@ plot_residual_qq <- function(residuals, plot_name = NULL, save = TRUE) {
         plot = p,
         width = 10,
         height = 6,
-        dpi = 300
+        dpi = 300,
+        bg = "white"
       )
       message("Saved: ", filename)
     }

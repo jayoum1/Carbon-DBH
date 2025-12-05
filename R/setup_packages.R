@@ -41,7 +41,7 @@ message("✓ All packages loaded successfully!")
 message("=")
 message("")
 
-# Set default ggplot2 theme for publication-style plots
+# Set default ggplot2 theme for publication-style plots with white background
 if (require(ggplot2, quietly = TRUE)) {
   theme_set(theme_minimal(base_size = 11) +
     theme(
@@ -51,8 +51,10 @@ if (require(ggplot2, quietly = TRUE)) {
       axis.text = element_text(size = 10),
       legend.position = "bottom",
       panel.grid.minor = element_blank(),
-      strip.text = element_text(face = "bold")
+      strip.text = element_text(face = "bold"),
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
     ))
-  message("✓ ggplot2 theme set to publication style")
+  message("✓ ggplot2 theme set to publication style with white background")
 }
 

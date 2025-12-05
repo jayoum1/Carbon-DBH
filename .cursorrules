@@ -1,0 +1,19 @@
+# Cursor Rules for Carbon DBH Project
+
+## Language Preference
+- Always respond in English
+- All code comments and documentation should be in English
+- All user-facing messages should be in English
+
+## Code Style
+- Use snake_case for Python variables and functions
+- Use descriptive variable names
+- Add docstrings to all functions
+- Follow PEP 8 style guidelines
+
+## Project Structure
+- Keep data files in Data/ directory
+- Keep scripts in src/ directory
+- Keep models in Models/ directory
+- Keep plots in plots/ directory
+

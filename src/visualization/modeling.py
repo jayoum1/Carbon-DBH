@@ -9,6 +9,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 plt.rcParams["figure.figsize"] = (7, 5)
+plt.rcParams["figure.facecolor"] = "white"
+plt.rcParams["axes.facecolor"] = "white"
+plt.rcParams["savefig.facecolor"] = "white"
+plt.rcParams["savefig.edgecolor"] = "white"
 
 # Add src directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -25,7 +29,7 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 
 def savefig(fig, name):
     out_path = os.path.join(SAVE_DIR, name)
-    fig.savefig(out_path, dpi=300, bbox_inches="tight")
+    fig.savefig(out_path, dpi=300, bbox_inches="tight", facecolor='white', edgecolor='white')
     print("Saved:", out_path)
 
 # Choose which target you want to visualize:

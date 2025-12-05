@@ -10,6 +10,10 @@ import sys
 from pathlib import Path
 
 plt.rcParams["figure.figsize"] = (8, 5)
+plt.rcParams["figure.facecolor"] = "white"
+plt.rcParams["axes.facecolor"] = "white"
+plt.rcParams["savefig.facecolor"] = "white"
+plt.rcParams["savefig.edgecolor"] = "white"
 
 # Add src directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -27,7 +31,7 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 def savefig(fig, name):
     """Helper to save figures to the SAVE_DIR with a consistent style."""
     out_path = os.path.join(SAVE_DIR, name)
-    fig.savefig(out_path, dpi=300, bbox_inches="tight")
+    fig.savefig(out_path, dpi=300, bbox_inches="tight", facecolor='white', edgecolor='white')
     print(f"Saved: {out_path}")
 
 # ------------------------------------------------------------

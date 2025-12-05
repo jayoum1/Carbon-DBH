@@ -4,6 +4,8 @@ numpy>=1.23.0
 
 # Machine Learning
 scikit-learn>=1.2.0
+xgboost>=2.0.0
+shap>=0.42.0
 
 # Statistical Analysis
 scipy>=1.10.0

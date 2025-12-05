@@ -1,0 +1,13 @@
+PrevDBH_cm
+Species_beech
+Species_black birch
+Species_mockernut hickory
+Species_musclewood
+Species_norway maple
+Species_red oak
+Species_sugar maple
+Species_white pine
+Species_yellow birch
+Plot_Middle
+Plot_Upper
+Group_softwood

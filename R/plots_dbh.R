@@ -82,7 +82,11 @@ plot_dbh_by_plot <- function(data = df, save = TRUE) {
       x = "DBH (cm)",
       y = "Frequency"
     ) +
-    theme_minimal()
+    theme_minimal() +
+    theme(
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
+    )
   
   if (save) {
     ggsave(
@@ -90,7 +94,8 @@ plot_dbh_by_plot <- function(data = df, save = TRUE) {
       plot = p,
       width = 12,
       height = 4,
-      dpi = 300
+      dpi = 300,
+      bg = "white"
     )
     message("Saved: plots/dbh_histogram_by_plot.png")
   }
@@ -130,6 +135,10 @@ plot_growth_by_species <- function(data = df, save = TRUE) {
       fill = "Plot"
     ) +
     theme_minimal() +
+    theme(
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
+    ) +
     theme(legend.position = "bottom")
   
   if (save) {
@@ -138,7 +147,8 @@ plot_growth_by_species <- function(data = df, save = TRUE) {
       plot = p,
       width = 10,
       height = 8,
-      dpi = 300
+      dpi = 300,
+      bg = "white"
     )
     message("Saved: plots/growth_boxplot_by_species.png")
   }
@@ -175,6 +185,10 @@ plot_dbh_timeseries <- function(data = df, save = TRUE) {
     ) +
     scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) +
     theme_minimal() +
+    theme(
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
+    ) +
     theme(legend.position = "bottom")
   
   if (save) {
@@ -183,7 +197,8 @@ plot_dbh_timeseries <- function(data = df, save = TRUE) {
       plot = p,
       width = 10,
       height = 6,
-      dpi = 300
+      dpi = 300,
+      bg = "white"
     )
     message("Saved: plots/dbh_timeseries_by_plot.png")
   }
@@ -225,6 +240,10 @@ plot_carbon_by_plot <- function(data = df, save = TRUE) {
     ) +
     scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) +
     theme_minimal() +
+    theme(
+      plot.background = element_rect(fill = "white", color = "white"),
+      panel.background = element_rect(fill = "white", color = "white")
+    ) +
     theme(legend.position = "bottom")
   
   if (save) {
@@ -233,7 +252,8 @@ plot_carbon_by_plot <- function(data = df, save = TRUE) {
       plot = p,
       width = 10,
       height = 6,
-      dpi = 300
+      dpi = 300,
+      bg = "white"
     )
     message("Saved: plots/carbon_timeseries_by_plot.png")
   }
