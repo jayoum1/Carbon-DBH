@@ -1,0 +1,29 @@
+PrevDBH_cm
+Species_autumn olive
+Species_basswood
+Species_beech
+Species_black birch
+Species_black oak
+Species_buckthorn
+Species_burning bush
+Species_dogwood
+Species_hophornbeam
+Species_mockernut
+Species_mockernut hickory
+Species_musclewood
+Species_norway maple
+Species_pignut hickory
+Species_red maple
+Species_red oak
+Species_sassafras
+Species_shagbark hickory
+Species_sugar maple
+Species_white ash
+Species_white pine
+Species_yellow birch
+Plot_Middle
+Plot_Upper
+GapYears
+Group_softwood
+GrowthType_initial
+GrowthType_normal
